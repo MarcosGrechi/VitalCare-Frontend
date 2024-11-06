@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
-import { apiUrl } from '../environments/environment';
+import { environment } from '../environments/environment';
 import { AuthService } from './authservice.service';
 import { map, Observable } from 'rxjs';
 import { Consulta } from '../entities/consulta.model';
 import { Paciente } from '../entities/paciente.model';
 import { HttpClient } from '@angular/common/http';
+
+const apiUrl = environment.apiUrl;
 
 @Injectable({
   providedIn: 'root'

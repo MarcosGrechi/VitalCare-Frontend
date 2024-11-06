@@ -1,15 +1,18 @@
 import { Injectable } from '@angular/core';
-import { apiUrl } from '../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from './authservice.service';
 import { Exame } from '../entities/exame.model';
 import { map, Observable } from 'rxjs';
+import { environment } from '../environments/environment';
+
+const apiUrl = environment.apiUrl;
 
 @Injectable({
   providedIn: 'root'
 })
 export class ExamesService {
   urlPath: string = `${apiUrl}/exames`;
+
 
   constructor(
     private readonly http: HttpClient,
