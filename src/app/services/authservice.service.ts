@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
-import { apiUrl } from '../environments/environment';
+import { environment } from '../environments/environment';
 import { LoginResponse } from '../entities/auth.models';
 import { Router } from '@angular/router';
 import { UserStorageService } from './users-storage.service';
 
+const apiUrl = environment.apiUrl; 
 @Injectable({
   providedIn: 'root',
 })

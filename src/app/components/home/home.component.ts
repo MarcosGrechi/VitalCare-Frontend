@@ -83,13 +83,13 @@ export class HomeComponent implements OnInit {
 
   carregarDadosDoDashboard(): void {
     this.dashboardService.getDashboardData().subscribe(
-      (data) => {            
+      (data: any) => {            
         this.quantidadePacientes = data.numeroPacientes;
         this.quantidadeConsultas = data.numeroConsultas;
         this.quantidadeExames = data.numeroExames;
         this.quantidadeUsuarios = data.numeroUsuarios;
       },
-      (error) => {
+      (error: any) => {
         console.error('Erro ao carregar dados do dashboard', error);
       }
     );
